@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import "tailwindcss";
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+::selection {
+  background-color: #22c55e; 
+  color: black;
+}
