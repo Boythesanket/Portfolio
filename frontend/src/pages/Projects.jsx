@@ -44,11 +44,27 @@ const Projects = () => {
     },
   ];
 
+  const side_projects = [
+    {
+      heading: "Mini Projects",
+      subtitle: "🚀 50 Mini Projects Challenge",
+      points: [
+        "HTML, CSS, JavaScript, React & Full-Stack projects",
+        "New projects added weekly",
+        "Building in public and documenting my learning journey"
+      ],
+      skillsUsed: ["HTML", "CSS", "JavaScript", "MERN"],
+      status: "Deployed",
+      projectNumber: "04",
+      href: "https://mini-projects-wheat.vercel.app/",
+    },
+  ];
+
   return (
     <>
       <main className="w-full px-4 py-7 mt-20 text-white">
         <HeadBox
-          title={"Selected projects"}
+          title={"Featured Projects"}
           subtitle={"// 03 — work"}
           skill={"projects"}
         />
@@ -58,6 +74,19 @@ const Projects = () => {
             {projects.map((project) => (
               <ProjectCard key={project.heading} {...project} />
             ))}
+          </div>
+
+          <div className="mt-20">
+            <HeadBox
+              title={"Mini Projects"}
+              skill={"mini_projects"}
+              subtitle={"// 050 - mini projects"}
+            />
+            <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {side_projects.map((project) => (
+                <ProjectCard key={project.heading} {...project} />
+              ))}
+            </div>
           </div>
         </section>
       </main>
